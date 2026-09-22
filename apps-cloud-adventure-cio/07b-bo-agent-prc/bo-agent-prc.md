@@ -19,37 +19,37 @@ Estimated Time: 10-15 minutes
 As a pre-requisite for this adventure, please download following files to your local desktop
 1. Policy document file **(ProcurementPolicies.pdf)**
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/ProcurementPolicies.pdf)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07b-bo-agent-prc/files/ProcurementPolicies.pdf)
 <br>
 2. Prompt file for the AI Agent **(Prompt-Procurement-Policy-Advisor.txt)**
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07b-bo-agent-prc/files/prompt-rag-agent-prc.txt)
 
 ## Begin Exercise
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
-    ![AI RAG Objectives](../07a-rag-agent-prc/images/rag-agent-prc-image001.jpg)
+    ![AI RAG Objectives](../07b-bo-agent-prc/images/rag-agent-prc-image001.jpg)
 
 2. The first step is to navigate to AI Agent Studio.
 
     > (1) Click on the **Tools** tab<br>
     > (2) Select the **AI Agent Studio** tile
 
-    ![Navigate to AI Agent Studio](../07a-rag-agent-prc/images/rag-agent-prc-image002.jpg)
+    ![Navigate to AI Agent Studio](../07b-bo-agent-prc/images/rag-agent-prc-image002.jpg)
 
 3. Next, we're going to create a Tool
 
     > (1) Click the ![Tools](../gen-images/tools.jpg) button/tab at the bottom of the page
 
-    ![Open tools](../07a-rag-agent-prc/images/rag-agent-prc-image003.jpg)
+    ![Open tools](../07b-bo-agent-prc/images/rag-agent-prc-image003.jpg)
 
 
 4. Tool Creation
 
     > (1) Click the ![add tool](../gen-images/plusadd.jpg) button to create a new tool
 
-    ![Create Tool](../07a-rag-agent-prc/images/rag-agent-prc-image004.jpg)
+    ![Create Tool](../07b-bo-agent-prc/images/rag-agent-prc-image004.jpg)
 
 5. Here, you will define your first Tool, a Document Tool.  This will allow the Agent to use the content of the documents to respond to user questions.
 
@@ -64,7 +64,7 @@ As a pre-requisite for this adventure, please download following files to your l
 
     > (3) **Scroll Down** to see the Documents fields and upload your document.
 
-    ![Edit Suppliers View](../07a-rag-agent-prc/images/rag-agent-prc-image005.jpg)
+    ![Edit Suppliers View](../07b-bo-agent-prc/images/rag-agent-prc-image005.jpg)
 
 
 6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
@@ -84,7 +84,7 @@ As a pre-requisite for this adventure, please download following files to your l
 
     > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
 
-    ![tool create](../07a-rag-agent-prc/images/rag-agent-prc-image006.jpg)
+    ![tool create](../07b-bo-agent-prc/images/rag-agent-prc-image006.jpg)
 
     **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
 
@@ -93,14 +93,14 @@ As a pre-requisite for this adventure, please download following files to your l
 
     > (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agenticon.jpg) at the bottom of the page.
 
-    ![Agents Page](../07a-rag-agent-prc/images/rag-agent-prc-image007.jpg)
+    ![Agents Page](../07b-bo-agent-prc/images/rag-agent-prc-image007.jpg)
 
 8. Here, you can see any existing agents.  But you want to create a new one.
 
     > (1) Click the **+ Add** button ![Add button Image](../gen-images/addw.jpg).
 
 
-    ![Add Agent](../07a-rag-agent-prc/images/rag-agent-prc-image008.jpg)
+    ![Add Agent](../07b-bo-agent-prc/images/rag-agent-prc-image008.jpg)
 
 9. Define the Details of the Agent.
 
@@ -115,13 +115,13 @@ As a pre-requisite for this adventure, please download following files to your l
     <br><br>
     Alternatively, prompt text is available in **Prompt-Procurement-Policy-Advisor-Agent.txt** file that you can download to your local desktop as below.
     <br>
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07b-bo-agent-prc/files/prompt-rag-agent-prc.txt)
     <br>
     Once done, please open this file and copy the contents into the Prompt field. <br>
 
     > (2) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
 
-    ![Create Agent](../07a-rag-agent-prc/images/rag-agent-prc-image009.jpg)
+    ![Create Agent](../07b-bo-agent-prc/images/rag-agent-prc-image009.jpg)
 
 ```
 <copy>
@@ -146,34 +146,34 @@ IMPORTANT GUIDELINES
 
     > (1) Click the Tools icon ![Tool Hammer Icon](../gen-images/toolhammericon.jpg) on the left.
 
-    ![Add Tools](../07a-rag-agent-prc/images/rag-agent-prc-image010.jpg) <br>
+    ![Add Tools](../07b-bo-agent-prc/images/rag-agent-prc-image010.jpg) <br>
 
 11. Find the appropriate tool and add it to your agent.
 
     > (1) Enter **CIOXX**, where **XX** is replaced with your user number, in the Ask Oracle field and press the **<****Enter****>** key or select **CIOXX** from the resulting dropdown.<br>  This filters the list of tools for easier selection. <br>
     > (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) next to the tool name **CIOXX Procurement Policy Document Tool**, where **XX** is replaced with your user number.<br>
 
-    ![Add tool](../07a-rag-agent-prc/images/rag-agent-prc-image011.jpg)
+    ![Add tool](../07b-bo-agent-prc/images/rag-agent-prc-image011.jpg)
 
 12. You can review the details of the Tool, including the option to require human approval.
 
     > (1) Click the Add button ![Add Button](../gen-images/addb.jpg).
 
-    ![Add Tools Complete](../07a-rag-agent-prc/images/rag-agent-prc-image012.jpg) <br>
+    ![Add Tools Complete](../07b-bo-agent-prc/images/rag-agent-prc-image012.jpg) <br>
 
 13. That's it! Let's save this and continue.
 
     > (1) Click the **Create** button ![Create Button](../gen-images/createw.jpg) on the top right.
 
-    ![Add Tools Create](../07a-rag-agent-prc/images/rag-agent-prc-image013.jpg) <br>
+    ![Add Tools Create](../07b-bo-agent-prc/images/rag-agent-prc-image013.jpg) <br>
 
 14. Click on Publish to continue.
 
- ![Publish Agent](../07a-rag-agent-prc/images/rag-agent-prc-image014.jpg) <br>
+ ![Publish Agent](../07b-bo-agent-prc/images/rag-agent-prc-image014.jpg) <br>
 
 15. You’ve just created your first AI Agent.  In the next adventure, you will put this agent to work as part of an Agent Team.<br>
 
-    ![Agent Created](../07a-rag-agent-prc/images/rag-agent-prc-image015.jpg) <br>
+    ![Agent Created](../07b-bo-agent-prc/images/rag-agent-prc-image015.jpg) <br>
 
 16. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
