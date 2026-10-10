@@ -18,7 +18,7 @@ Estimated Time: 10-15 minutes
 
 1. Create Agentic App including Actions and Testing
 
-    ![Adventure Flow – Agent App Command Center](images/agentic-app-prc-image1.jpg)
+    ![Adventure Flow – Agent App Command Center](../prc/images/agentic-app-prc-image1.jpg)
 
 2. Navigate to AI Agent Studio
 
@@ -26,25 +26,25 @@ Estimated Time: 10-15 minutes
 
     > (2): Click on **AI Agent Studio**
 
-    ![Springboard](images/agentic-app-prc-image2.jpg)
+    ![Springboard](../prc/images/agentic-app-prc-image2.jpg)
 
 3. AI Agent Studio Home Screen
 
     > (1): Click on the **Expand** Icon.
 
-    ![expand Menu](images/agentic-app-prc-image3.jpg)
+    ![expand Menu](../prc/images/agentic-app-prc-image3.jpg)
 
 4. Navigate to Agentic Applications
 
     > (1): Click on the **Applications** Icon.
 
-    ![Open Resources](images/agentic-app-prc-image4.jpg)
+    ![Open Resources](../prc/images/agentic-app-prc-image4.jpg)
 
 5. Create a New Agentic Application
 
     > (1): Click on the **Add** Icon.
 
-    ![Add Application](images/agentic-app-prc-image5.jpg)
+    ![Add Application](../prc/images/agentic-app-prc-image5.jpg)
 
 6. Create a name and add a description to your agentic app.
 
@@ -52,7 +52,7 @@ Estimated Time: 10-15 minutes
 
     > (2): Click on **Create**.
 
-    ![Application Name](images/agentic-app-prc-image6.jpg)
+    ![Application Name](../prc/images/agentic-app-prc-image6.jpg)
 
 7. Assign an agent to Ask Oracle.
 
@@ -64,7 +64,7 @@ Estimated Time: 10-15 minutes
 
     > (4): Select the **Supplier Negotiations Ask Oracle** Agent.
 
-    ![Assign Ask Agent](images/agentic-app-prc-image7.jpg)
+    ![Assign Ask Agent](../prc/images/agentic-app-prc-image7.jpg)
 
 8. Assign an agent to Summary.
 
@@ -76,7 +76,7 @@ Estimated Time: 10-15 minutes
 
     > (4): Select the **Negotiations Workload Monitor** Agent.
 
-    ![Assign Summary Agent](images/agentic-app-prc-image8.jpg)
+    ![Assign Summary Agent](../prc/images/agentic-app-prc-image8.jpg)
 
 9. Format the Agent Section into 2 columns.
 
@@ -86,7 +86,7 @@ Estimated Time: 10-15 minutes
 
     > (3): Click on the 2 equal columns image.
 
-    ![Page Options](images/agentic-app-prc-image9.jpg)
+    ![Page Options](../prc/images/agentic-app-prc-image9.jpg)
 
 10. Add the Negotiations Award Advisor Agent to the Agentic App.
 
@@ -96,17 +96,17 @@ Estimated Time: 10-15 minutes
 
     > (3): Select the **Negotiations Award Advisor** Agent.
 
-    ![Add Section](images/agentic-app-prc-image10.jpg)
+    ![Add Section](../prc/images/agentic-app-prc-image10.jpg)
 
 11. Rename the New Panel to Negotiations Award Advisor
 
-    ![Rename the New Panel to Negotiations Award Advisor](images/agentic-app-prc-image11.jpg)
+    ![Rename the New Panel to Negotiations Award Advisor](../prc/images/agentic-app-prc-image11.jpg)
 
 12. Rename the New Panel to Negotiations Award Advisor
 
     > (1): Type **Negotiations Award Advisor** in the text box. <br>
 
-    ![Rename the New Panel to Negotiations Award Advisor](images/agentic-app-prc-image12.jpg)
+    ![Rename the New Panel to Negotiations Award Advisor](../prc/images/agentic-app-prc-image12.jpg)
 
 13. Add the In-Progress Negotiations Monitor Agent to the Agentic App.
 
@@ -116,13 +116,13 @@ Estimated Time: 10-15 minutes
 
     > (3): Select the **In-Progress Negotiations Monitor Agent ** Agent.
 
-    ![Add Another Section](images/agentic-app-prc-image13.jpg)
+    ![Add Another Section](../prc/images/agentic-app-prc-image13.jpg)
 
 14. Rename the New Panel to In-Progress Negotiations Monitor
 
     > (1): Click on the **Pencil** icon.
 
-    ![Edit Panel](images/agentic-app-prc-image14.jpg)
+    ![Edit Panel](../prc/images/agentic-app-prc-image14.jpg)
 
 15. Rename the New Panel to In-Progress Negotiations Monitor
 
@@ -130,7 +130,7 @@ Estimated Time: 10-15 minutes
 
     > (2): Type on the **Check** icon.
 
-    ![Rename Panel](images/agentic-app-prc-image15.jpg)
+    ![Rename Panel](../prc/images/agentic-app-prc-image15.jpg)
 
 16. Add the Supplier Negotiations Ask Oracle Agent to the Agentic App.
 
@@ -142,13 +142,13 @@ Estimated Time: 10-15 minutes
 
     > (4): Select the **Supplier Negotiations Ask Oracle ** Agent.
 
-    ![Add third section](images/agentic-app-prc-image16.jpg)
+    ![Add third section](../prc/images/agentic-app-prc-image16.jpg)
 
 17. Rename the New Panel to Supplier Negotiations Summary
 
     > (1): Click on the **Pencil** icon.
 
-    ![Edit Panel](images/agentic-app-prc-image17.jpg)
+    ![Edit Panel](../prc/images/agentic-app-prc-image17.jpg)
 
 18. Rename the New Panel to Supplier Negotiations Summary
 
@@ -156,11 +156,11 @@ Estimated Time: 10-15 minutes
 
     > (2): Type on the **Check** icon.
 
-    ![Rename Panel](images/agentic-app-prc-image18.jpg)
+    ![Rename Panel](../prc/images/agentic-app-prc-image18.jpg)
 
 19. Configure the Supplier Negotiations Summary Panel to show a stacked bar chart of negotiations by business unit and status.
 
-    ![Configure the Supplier Negotiations Summary Panel](images/agentic-app-prc-image19.jpg)
+    ![Configure the Supplier Negotiations Summary Panel](../prc/images/agentic-app-prc-image19.jpg)
 
 20. Add Actions to the Agentic App
 
@@ -168,7 +168,7 @@ Estimated Time: 10-15 minutes
 
     > (2): Click on the **+*** icon to add an action
 
-    ![Create Document Template](images/agentic-app-prc-image20.jpg)
+    ![Create Document Template](../prc/images/agentic-app-prc-image20.jpg)
 
 21. Name and configure the Action
 
@@ -176,7 +176,7 @@ Estimated Time: 10-15 minutes
 
     > (2): Click on **Add Step**. <br>
 
-    ![Name and configure the Action](images/agentic-app-prc-image21.jpg)
+    ![Name and configure the Action](../prc/images/agentic-app-prc-image21.jpg)
 
 22. Configure Navigate to App
 
@@ -184,11 +184,11 @@ Estimated Time: 10-15 minutes
 
     > (2): Click on **Negotiation Details**.
 
-    ![Action app code](images/agentic-app-prc-image22.jpg)
+    ![Action app code](../prc/images/agentic-app-prc-image22.jpg)
 
 23. Configure Navigate to App
 
-    ![Configure Navigate to App](images/agentic-app-prc-image23.jpg)
+    ![Configure Navigate to App](../prc/images/agentic-app-prc-image23.jpg)
 
 24. Add a PDF Document Template
 
@@ -198,7 +198,7 @@ Estimated Time: 10-15 minutes
 
     > (3): Click on the **PDF*** icon
 
-    ![PDF Template](images/agentic-app-prc-image24.jpg)
+    ![PDF Template](../prc/images/agentic-app-prc-image24.jpg)
 
 25. Configure the PDF Document Template
 
@@ -215,9 +215,9 @@ Estimated Time: 10-15 minutes
 
     > (3): Enter **Generated detailed, bulleted list where possible** into **Presentation Instructions**.
 
-    ![Template layout](images/agentic-app-prc-image25.jpg)
+    ![Template layout](../prc/images/agentic-app-prc-image25.jpg)
 
-26. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+26. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 
