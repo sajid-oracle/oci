@@ -83,57 +83,133 @@ Set riskLevel to "" for each sales order
 ```
 **User Prompt for Prepare Output node**:
 ```
+<details>
+  <summary>This prompt prepares sales order data to be displayed nicely in Agentic Application</summary>
 <copy>
+# ROLE
+
+You are a UI Data Mapper. Transform the supplied sales-order data into a valid Agentic Apps `multiRecordWidget`.
+
+# INPUT DATA
+
+{{$context.$nodes.FOR_EACH_SALES_ORDER.$output}}
+
+# REQUIREMENTS
+
+- Return only the completed `<oraInfoDisplay>` widget.
+- Do not include Markdown, explanations, comments, or additional text.
+- Set `patternId` to `multiRecordWidget`.
+- Set the widget subtitle to `Sales Orders`.
+- Create one row for every sales order.
+- If the input is empty, return an empty `rows` array.
+
+# COLUMNS
+
+Use these columns in this exact order:
+
+1. Risk Level
+2. Sales Order#
+3. Sold To Customer
+4. Sales Order Amount
+5. Submitted Date
+
+Map each row’s cells in the same order:
+
+1. `riskLevel`
+2. `salesOrderNumber`
+3. `soldToCustomer`
+4. `salesOrderAmount`
+5. `submittedDate`
+
+# COLOR-CODED RISK LEVEL
+
+Render the Risk Level cell as a badge:
+
+- `High`: `{ "type": "badge", "text": "High", "priority": "error" }`
+- `Medium`: `{ "type": "badge", "text": "Medium", "priority": "warning" }`
+- `Low`: `{ "type": "badge", "text": "Low", "priority": "success" }`
+- Any blank or unknown value: use a neutral badge containing the original value, or `Unknown` when blank.
+
+Risk-level matching must be case-insensitive, but the displayed text must be `High`, `Medium`, or `Low`.
+
+# SORTING
+
+Sort all rows before generating the widget:
+
+1. Risk Level in this explicit order: `High`, `Medium`, `Low`, then unknown or blank values.
+2. Sales Order# in descending order within each risk level.
+
+Compare Sales Order# numerically when it is numeric. Otherwise, compare it as text in descending order.
+
+# ROW ACTION
+
+Add a row-level action to every row:
+
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "properties": {
-    "orders": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "salesOrderNumber": {
-            "type": "string"
-          },
-          "businessUnitName": {
-            "type": "string"
-          },
-          "soldToCustomer": {
-            "type": "string"
-          },
-          "salesOrderAmount": {
-            "type": "string"
-          },
-          "orderStatus": {
-            "type": "string"
-          },
-          "submittedDate": {
-            "type": "string"
-          },
-          "riskLevel": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "salesOrderNumber",
-          "businessUnitName",
-          "soldToCustomer",
-          "salesOrderAmount",
-          "orderStatus",
-          "submittedDate",
-          "riskLevel"
-        ],
-        "additionalProperties": false
-      }
-    }
-  },
-  "required": [
-    "orders"
-  ],
-  "additionalProperties": false
+  "text": "Review",
+  "command": "ora.Invoke(\"action1\", {\"salesOrderNumber\":\"<current salesOrderNumber>\",\"riskLevel\":\"<current riskLevel>\",\"instruction\":\"Review Sales Order\"})"
 }
+
+Replace the placeholders with values from the current sales-order record.
+
+The action must be defined using the row-level `action` property so that the widget renders it at the start of the row with the first cell. Do not add an `Action` column and do not place the action object inside `cells`.
+
+Escape dynamic values correctly so the output remains valid JSON.
+
+Format `salesOrderAmount` as US currency before placing it in the cell:
+
+- Prefix the value with `$`.
+- Use comma thousands separators.
+- Display no decimal places.
+- Example: `12500` becomes `$12,500`.
+- If the source value already contains `$`, do not add another currency symbol.
+- If the value is blank or null, display `—`.
+
+# REQUIRED OUTPUT STRUCTURE
+
+<oraInfoDisplay key="sales-orders">
+{
+  "patternId": "multiRecordWidget",
+  "config": {
+    "subtitle": "Sales Orders",
+    "cols": [
+      "Risk Level",
+      "Sales Order#",
+      {
+        "label": "Sold To Customer",
+        "showOnExpand": true
+      },
+      "Sales Order Amount",
+      {
+        "label": "Submitted Date",
+        "showOnExpand": true
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "type": "badge",
+            "text": "High",
+            "priority": "error"
+          },
+          "123456",
+          "Example Customer",
+          "$10,000",
+          "2026-10-13"
+        ],
+        "action": {
+          "text": "Review",
+          "command": "ora.Invoke(\"action1\", {\"salesOrderNumber\":\"123456\",\"riskLevel\":\"High\",\"instruction\":\"Review Sales Order\"})"
+        },
+        "drillDownAction": "ora.Invoke(\"action1\", {\"salesOrderNumber\":\"123456\",\"riskLevel\":\"High\",\"instruction\":\"Review Sales Order\"})"
+      }
+    ]
+  }
+}
+</oraInfoDisplay>
 </copy>
+</details>
 ```
 ## Begin Exercise
 
@@ -242,7 +318,8 @@ Set riskLevel to "" for each sales order
 
 14. Enter the name of this LLM node.  Since this is used to determine the Sales Order fields available in this workflow, you can just call it Select Fields.
 
-    > (1) Enter **Select Fields** in the Name field of the LLM Node properties panel.> (2) Scroll down.
+    > (1) Enter **Select Fields** in the Name field of the LLM Node properties panel.<br>
+    > (2) Scroll down.
 
     ![Show Component Palette](images/workflow-agenticapp-scm-image14.jpg)
 
