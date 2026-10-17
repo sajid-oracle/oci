@@ -20,7 +20,7 @@ This Activity Guide will lead you along the way through a set of Adventure Labs
 
 (4) **Create Agentic Application**: Create Agentic Apps to deliver a unified user experience powered by multiple specialized agents working together behind the scenes.<br>
 
-(5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience using AI to analyze business data and uncover actionable insights.<br>
+(5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and key insights into your company’s operations. You will get hands-on experience using AI to analyze business data and uncover actionable insights.<br>
 
 ## Learn More
 Let's create your team name for your AI Adventure!
