@@ -202,7 +202,7 @@ Action:
 
     ![Select BO Functions](images/bo-agent-hcm-image9.jpg)
 
-10. You can see you new Absence Tool has been created.   Next, we want to create a Topic.
+10. You can see your new Absence Tool has been created.   Next, we want to create a Topic.
 
     > (1) Note that your first Tool has been created.  You may need to scroll or search as this will show all tools created by attendees. <br>
 
@@ -311,7 +311,7 @@ Action:
 
 21. Agent Settings: Prompts
 
-    > (1) Enter the value for the **Agent Role**.  To streamline this step, we've agent role available in the copy block below. <br>
+    > (1) Enter the value for the **Agent Role**.  To streamline this step, we've made the agent role available in the copy block below. <br>
     > (2) Enter the value for the **Prompt**.   Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below. <br>
     > (3) Type **AIA** in the Search by name, description or code field under Available Tools.<br>
     > (4) **Hover** over **AIA Absence Deep Link Tool** and click the **+** sign.  This deep link tool will provide drilldown to specific transactions within HCM.

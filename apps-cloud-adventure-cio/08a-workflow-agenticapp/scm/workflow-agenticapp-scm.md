@@ -9,9 +9,9 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 Create an Agent Workflow that can be used as part of an Agentic App.  This lab will create a workflow that leverages Sales Orders from the Order Management module or Oracle SCM Cloud.
 
 In this activity you will use Oracle Fusion AI Agent Studio to
-* Create an Agent Workflow using a copy of a partially completed workflow.
+* Create an Agent Workflow from a pre-defined partially completed workflow.
 * Review the pre-created workflow node that leverages the Policy document as code capability.
-* Add Business Object and LLM nodes to access Sales Order transactions ad format output.
+* Add Business Object and LLM nodes to retrieve Sales Order transactions, apply policy and prepare data for the agentic app.
 
 Estimated Time: 10-15 minutes
 
@@ -20,15 +20,18 @@ Estimated Time: 10-15 minutes
 ![Alert Flat](../../gen-images/cautionflagextrasmalltransparent2.png)
 ****Please Note**** This adventure requires the entry of a User Prompt and an Output Specifications. To streamline typing and eliminate any typing errors, these are shown in-line in the guide below and also available in the copy blocks below.<br><br>
 **User Prompt for Select Fields node**:
-```
+``` text
+<details> <summary>Specifies the Sales Order column attributes to be used in this workflow.</summary>
 <copy>
 Based on the output from {{$context.$nodes.GET_SALES_ORDER_SUBMITTED.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
 
 Set riskLevel to "" for each sales order
 </copy>
+</details>
 ```
 **Output Specification for Select Fields node**:
-```
+```text
+<details> <summary>Specifies the JSON Schema for data output.</summary>
 <copy>
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -80,9 +83,10 @@ Set riskLevel to "" for each sales order
   "additionalProperties": false
 }
 </copy>
+</details>
 ```
 **User Prompt for Prepare Output node**:
-```
+```text
 <details>
   <summary>This prompt prepares sales order data to be displayed nicely in Agentic Application</summary>
 <copy>
@@ -213,7 +217,7 @@ Format `salesOrderAmount` as US currency before placing it in the cell:
 ```
 ## Begin Exercise
 
-1. Assemble an AI Agent Team, Debug and Test
+1. Build Workflow for Agentic App, Debug and Test
 
 
     ![Adventure Flow](images/workflow-agenticapp-scm-image1.jpg)
@@ -243,21 +247,19 @@ Format `salesOrderAmount` as US currency before placing it in the cell:
 
     ![Open Workflows](images/workflow-agenticapp-scm-image4.jpg)
 
-5. You’ll now create a workflow that will eventually be leveraged by an Agentic App in a future lab.  We’ve created a workflow template with a couple of pre-defined steps to save time.  You’ll make a copy of that template and add additional nodes.
+5. You’ll now create a workflow that will eventually be leveraged by an Agentic App in a future lab.  We’ve created a workflow agent template with a couple of pre-defined steps to save time.  You’ll make a copy of that template and add additional nodes.
 
     > (1) Type **AIAT** in the Search field and press the **<Enter>** key.<BR>
 
-    > (2) Look for the Workflow named **AIAT Sales Order Workflow** and click the **Duplicate** icon in on the right side of that row.
+    > (2) Look for the Workflow named **AIAT Sales Order Workflow** and click the **Duplicate** icon on the right side of that row.
 
     ![Copy Workflow Template](images/workflow-agenticapp-scm-image5.jpg)
 
 6. Workflow Settings: Details
 
-    > (1) Enter **CIOXX YYY Sales Order Workflow** in the Name field, where XX is replaced with your user number and YYY is replaced with your initials.  You can completed replace the field name or edit the existing field.<BR>
-
+    > (1) Enter **CIOXX YYY Sales Order Workflow** in the Name field, where XX is replaced with your user number and YYY is replaced with your initials.  You can replace the entire name or edit the existing value.<BR>
 
     > (2) Click on **Create**
-
 
     ![Enter Workflow Settings Detail](images/workflow-agenticapp-scm-image6.jpg)
 
@@ -268,33 +270,32 @@ Format `salesOrderAmount` as US currency before placing it in the cell:
 
     ![Review Workflow Node](images/workflow-agenticapp-scm-image7.jpg)
 
-8. The first thing you want to do it create a Business Object node to access the Sales Orders.  You will do whiThis will enable the workflow to determine to appropriate route for this request.
+8. The first thing you want to do is create a Business Object node to access the Sales Orders.
 
     > (1) Click the  **Black Circle Icon** under the play icon and drag to empty space directly below it<br>
     > (2) Release the mouse once the drag is complete.
 
     ![Add Node](images/workflow-agenticapp-scm-image8.jpg)
 
-9. A dropdown list appears with a list of available nodes.  Pick Business Object Function from the resulting dropdown list or use the Search nodes…field
+9. A dropdown list appears with a list of available nodes.  Select Business Object Function from the resulting dropdown list or use the Search nodes… field
 
     > (1) Select  **Business Object Function** from the dropdown list
 
 
     ![Add BO Node](images/workflow-agenticapp-scm-image9.jpg)
 
-10. Now you can define your Business Ibject
+10. Now you can define your Business Object
 
+    > (1) Enter **Get Sales Order** in the Name field <br>
 
-    > (1) Enter **Get Sales Order** in the Name field <br>  
+    > (2) Select Type **AIA** in the **Business Object** field and select **AIA Sales Order** from the Business Object dropdown <br>
 
-    > (2) Select Type **AIA** in the **Business Object** field and select **AIA Sales Order** from the Business Object dropdown <br>  
-
-    > (3) Select **getSalesOrderBySubmittedDateRange** rom the **Function** dropdown.
+    > (3) Select **getSalesOrderBySubmittedDateRange** from the **Function** dropdown.<br>
     > (4) Scroll down.
 
     ![Define Business Object](images/workflow-agenticapp-scm-image10.jpg)
 
-11. To keep things simple in this, you can enter the starting date for the Sales Order query.  This could be replaced with a user requested date range, but you’ll just enter a date.
+11. To keep things simple, you can enter the starting date for the Sales Order query.  This could be replaced with a user requested date range, but you’ll just enter a date for now.
 
     > (1) Enter **2026-10-01** in the salesOrderDateRange field (You can use any date, but pick one at least 30 days prior to today).<br>
     > (2) Click the **x** icon in the top right corner of the Business Object panel to close the panel. 
@@ -302,98 +303,102 @@ Format `salesOrderAmount` as US currency before placing it in the cell:
 
     ![Complete Business Object Panel](images/workflow-agenticapp-scm-image11.jpg)
 
-12. Next, you’ll add an LLM node.  This node will define the specific columns/fields from the Get Sales Order object that you’ll make available to the workflow.
+12. Next, you’ll add a LLM node.  This node will define the specific columns/fields from the Sales Order object that you’ll make available to the workflow.
 
     > (1) Hover over the **Get Sales Order** node, click the  **Black Circle Icon** that appears and drag to empty space directly below it<br>
     > (2) Release the mouse once the drag is complete.
 
     ![Add LLM Node](images/workflow-agenticapp-scm-image12.jpg)
 
-13. A dropdown list appears with a list of available nodes.  Pick LLM from the resulting dropdown list or use the Search nodes…field
+13. A dropdown list appears with a list of available nodes.  Select LLM from the resulting dropdown list or use the Search nodes… field
 
     > (1) Select  **LLM** from the dropdown list
 
 
     ![Add LLM Node](images/workflow-agenticapp-scm-image13.jpg)
 
-14. Enter the name of this LLM node.  Since this is used to determine the Sales Order fields available in this workflow, you can just call it Select Fields.
+14. Enter the name of this LLM node.  Since this node is used to determine the Sales Order fields available in this workflow, you can just call it Select Fields.
 
     > (1) Enter **Select Fields** in the Name field of the LLM Node properties panel.<br>
     > (2) Scroll down.
 
     ![Show Component Palette](images/workflow-agenticapp-scm-image14.jpg)
 
-15. Here you’ll enter the prompt information and output specifications for this node.  You want the workflow to determine whether the user is asking a query about benefit policies or trying to work with absences and leaves.
+15. Here you’ll enter the prompt information and output specifications for this node.
 
-    > (1) Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or from the downloadable file provided in the pre-requisites for this lab.<br>
-    > (2) Enter the **Output Specification**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or from the downloadable file provided in the pre-requisites for this lab.<br>
+    > (1) Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or provided in the above pre-requisites section for this lab.<br>
+    > (2) Enter the **Output Specification**.  To streamline this step, we've pre-created the output specification. The text is available in the ***copy block*** below or provided in the above pre-requisites section for this lab.<br>
     > (3) Click the **x** icon in the top right corner to close the panel.  
 
 
     ![Enter Agent Info](images/workflow-agenticapp-scm-image15.jpg)
 
-**User Prompt**:
-```
-<copy>
-Based on the output from {{$context.$nodes.GET_SALES_ORDER_SUBMITTED.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
+  **User Prompt**:
+      ```  text
+      <details> <summary>Specifies the Sales Order column attributes to be used in this workflow.</summary>
+      <copy>
+      Based on the output from {{$context.$nodes.GET_SALES_ORDER_SUBMITTED.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
 
-Set riskLevel to "" for each sales order
-</copy>
-```
-**Output Specification**:
-```
-<copy>
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "properties": {
-    "orders": {
-      "type": "array",
-      "items": {
+      Set riskLevel to "" for each sales order
+      </copy>
+      </details>
+      ```
+      **Output Specification**:
+      ``` text
+      <details> <summary>Specifies the JSON Schema for data output.</summary>
+      <copy>
+      {
+        "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
         "properties": {
-          "salesOrderNumber": {
-            "type": "string"
-          },
-          "businessUnitName": {
-            "type": "string"
-          },
-          "soldToCustomer": {
-            "type": "string"
-          },
-          "salesOrderAmount": {
-            "type": "string"
-          },
-          "orderStatus": {
-            "type": "string"
-          },
-          "submittedDate": {
-            "type": "string"
-          },
-          "riskLevel": {
-            "type": "string"
+          "orders": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "salesOrderNumber": {
+                  "type": "string"
+                },
+                "businessUnitName": {
+                  "type": "string"
+                },
+                "soldToCustomer": {
+                  "type": "string"
+                },
+                "salesOrderAmount": {
+                  "type": "string"
+                },
+                "orderStatus": {
+                  "type": "string"
+                },
+                "submittedDate": {
+                  "type": "string"
+                },
+                "riskLevel": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salesOrderNumber",
+                "businessUnitName",
+                "soldToCustomer",
+                "salesOrderAmount",
+                "orderStatus",
+                "submittedDate",
+                "riskLevel"
+              ],
+              "additionalProperties": false
+            }
           }
         },
         "required": [
-          "salesOrderNumber",
-          "businessUnitName",
-          "soldToCustomer",
-          "salesOrderAmount",
-          "orderStatus",
-          "submittedDate",
-          "riskLevel"
+          "orders"
         ],
         "additionalProperties": false
       }
-    }
-  },
-  "required": [
-    "orders"
-  ],
-  "additionalProperties": false
-}
-</copy>
-```
+      </copy>
+      </details>
+      ```
 
 16. Next, you’ll connect your Select Fields LLM node to the existing For Each Sales Order Node.  You can re-arrange your existing nodes via drag and drop or use the prettify icon at in the top toolbar to straighten up your nodes, as shown below.
 
@@ -403,7 +408,7 @@ Set riskLevel to "" for each sales order
 
     ![Connect LLM And Loop Nodes](images/workflow-agenticapp-scm-image16.jpg)
 
-17. You have one final node to add and that is a node that will prepare and format the output from this workflow.  You’ll add this to the end of the For Each Sales Order node.
+17. You have one final node to add that will prepare the output from this workflow to be used in an agentic app.  You’ll add this to the end of the For Each Sales Order node.
 
     > (1) Hover over the bottom of the **For Each Sales Order** node, click the  **Black Circle Icon** that appears and drag to empty space directly below it.<br>
 
@@ -411,87 +416,160 @@ Set riskLevel to "" for each sales order
 
     ![Add LLM Node](images/workflow-agenticapp-scm-image17.jpg)
 
-18. You have one final node to add and that is a node that will prepare and format the output from this workflow.  You’ll add this to the end of the For Each Sales Order node.
+18. Select LLM node or use the Search nodes.. field.
 
-    > (1) Hover over the bottom of the **For Each Sales Order** node, click the  **Black Circle Icon** that appears and drag to empty space directly below it.<br>
-
-    > (2) Release the mouse once the drag is complete.
+    > (1) Select LLM node.<br>
 
     ![Add LLM Node](images/workflow-agenticapp-scm-image18.jpg)
 
-19. Enter the name of this LLM node, which will format and prepare the output of this workflow
+19. Enter the name of this LLM node, which will format and prepare the output of this workflow to be used in an agentic app.
 
     > (1) Enter **Prepare output** in the Name field of the LLM Node properties panel.<br>
     > (2) Scroll down.
 
     ![LLM Prepare Output Name](images/workflow-agenticapp-scm-image19.jpg)
 
-20. Here you’ll enter the prompt information for this node.  You want the workflow to output specific information for each sales order.
+20. Here you’ll enter the prompt information for this node. This prompt will provide guidance to prepare output from this workflow. 
 
-    > (1) Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or from the downloadable file provided in the pre-requisites for this lab.<br>
+    > (1) Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or provided in the above pre-requisites section for this lab.<br>
     > (2) Scroll down.
 
 
     ![Enter user prompt](images/workflow-agenticapp-scm-image20.jpg)
 
-**User Prompt for Prepare Output node**:
-```
+ **User Prompt for Prepare Output node**:
+    ```text
+    <details> <summary>Details Sales Order data sources and output instructions.</summary>
 <copy>
+# ROLE
+
+You are a UI Data Mapper. Transform the supplied sales-order data into a valid Agentic Apps `multiRecordWidget`.
+
+# INPUT DATA
+
+{{$context.$nodes.FOR_EACH_SALES_ORDER.$output}}
+
+# REQUIREMENTS
+
+- Return only the completed `<oraInfoDisplay>` widget.
+- Do not include Markdown, explanations, comments, or additional text.
+- Set `patternId` to `multiRecordWidget`.
+- Set the widget subtitle to `Sales Orders`.
+- Create one row for every sales order.
+- If the input is empty, return an empty `rows` array.
+
+# COLUMNS
+
+Use these columns in this exact order:
+
+1. Risk Level
+2. Sales Order#
+3. Sold To Customer
+4. Sales Order Amount
+5. Submitted Date
+
+Map each row’s cells in the same order:
+
+1. `riskLevel`
+2. `salesOrderNumber`
+3. `soldToCustomer`
+4. `salesOrderAmount`
+5. `submittedDate`
+
+# COLOR-CODED RISK LEVEL
+
+Render the Risk Level cell as a badge:
+
+- `High`: `{ "type": "badge", "text": "High", "priority": "error" }`
+- `Medium`: `{ "type": "badge", "text": "Medium", "priority": "warning" }`
+- `Low`: `{ "type": "badge", "text": "Low", "priority": "success" }`
+- Any blank or unknown value: use a neutral badge containing the original value, or `Unknown` when blank.
+
+Risk-level matching must be case-insensitive, but the displayed text must be `High`, `Medium`, or `Low`.
+
+# SORTING
+
+Sort all rows before generating the widget:
+
+1. Risk Level in this explicit order: `High`, `Medium`, `Low`, then unknown or blank values.
+2. Sales Order# in descending order within each risk level.
+
+Compare Sales Order# numerically when it is numeric. Otherwise, compare it as text in descending order.
+
+# ROW ACTION
+
+Add a row-level action to every row:
+
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "properties": {
-    "orders": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "salesOrderNumber": {
-            "type": "string"
-          },
-          "businessUnitName": {
-            "type": "string"
-          },
-          "soldToCustomer": {
-            "type": "string"
-          },
-          "salesOrderAmount": {
-            "type": "string"
-          },
-          "orderStatus": {
-            "type": "string"
-          },
-          "submittedDate": {
-            "type": "string"
-          },
-          "riskLevel": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "salesOrderNumber",
-          "businessUnitName",
-          "soldToCustomer",
-          "salesOrderAmount",
-          "orderStatus",
-          "submittedDate",
-          "riskLevel"
-        ],
-        "additionalProperties": false
-      }
-    }
-  },
-  "required": [
-    "orders"
-  ],
-  "additionalProperties": false
+  "text": "Review",
+  "command": "ora.Invoke(\"action1\", {\"salesOrderNumber\":\"<current salesOrderNumber>\",\"riskLevel\":\"<current riskLevel>\",\"instruction\":\"Review Sales Order\"})"
 }
+
+Replace the placeholders with values from the current sales-order record.
+
+The action must be defined using the row-level `action` property so that the widget renders it at the start of the row with the first cell. Do not add an `Action` column and do not place the action object inside `cells`.
+
+Escape dynamic values correctly so the output remains valid JSON.
+
+Format `salesOrderAmount` as US currency before placing it in the cell:
+
+- Prefix the value with `$`.
+- Use comma thousands separators.
+- Display no decimal places.
+- Example: `12500` becomes `$12,500`.
+- If the source value already contains `$`, do not add another currency symbol.
+- If the value is blank or null, display `—`.
+
+# REQUIRED OUTPUT STRUCTURE
+
+<oraInfoDisplay key="sales-orders">
+{
+  "patternId": "multiRecordWidget",
+  "config": {
+    "subtitle": "Sales Orders",
+    "cols": [
+      "Risk Level",
+      "Sales Order#",
+      {
+        "label": "Sold To Customer",
+        "showOnExpand": true
+      },
+      "Sales Order Amount",
+      {
+        "label": "Submitted Date",
+        "showOnExpand": true
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "type": "badge",
+            "text": "High",
+            "priority": "error"
+          },
+          "123456",
+          "Example Customer",
+          "$10,000",
+          "2026-10-13"
+        ],
+        "action": {
+          "text": "Review",
+          "command": "ora.Invoke(\"action1\", {\"salesOrderNumber\":\"123456\",\"riskLevel\":\"High\",\"instruction\":\"Review Sales Order\"})"
+        },
+        "drillDownAction": "ora.Invoke(\"action1\", {\"salesOrderNumber\":\"123456\",\"riskLevel\":\"High\",\"instruction\":\"Review Sales Order\"})"
+      }
+    ]
+  }
+}
+</oraInfoDisplay>
 </copy>
+</details>
 ```
 
 21. You can enable various capabilities for how this workflow interacts with a resulting Agentic App.
 
-    > (1) Click the **On** option for the **Enable Actions for the widgets** options under **App Experience**
+    > (1) Click the **On** option for the **Enable Actions for the widgets** options under **App Experience**<br>
     > (2) Select **Multi-Record Widget** in list of Widgets.<br>
     > (3) Click the **x** icon in the top right corner to close the panel.
 

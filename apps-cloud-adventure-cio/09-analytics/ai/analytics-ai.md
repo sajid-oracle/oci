@@ -149,7 +149,7 @@ Change to horizontal bar and sort high to low
 
 18. Create a new workbook
 
-    > (1) Click on the **Create** button in the upper right corner.
+    > (1) Click on the **Create** button in the upper right corner.<br>
 
     > (2) Click on **Workbook**.
 
@@ -157,7 +157,7 @@ Change to horizontal bar and sort high to low
 
 19. Add Data
 
-    > (1) Select **Fusion Data Model** by clicking on the checkbox.
+    > (1) Select **Fusion Data Model** by clicking on the checkbox.<br>
 
     > (2) Click on the **Add to Workbook** button.
 
@@ -221,9 +221,9 @@ Change to horizontal bar and sort high to low
 
 27. You will now see data side by side.
 
-    > (1) Click on the columns with turnover.
+    > (1) Click on the columns with turnover.<br>
 
-    > (2) You will see relevant candidates that match the profile, <br>
+    > (2) You will see relevant candidates that match the profile <br>
 
     ![Turnover by Job role Dashboard](images/analytics-with-ai-image27.jpg)
 
