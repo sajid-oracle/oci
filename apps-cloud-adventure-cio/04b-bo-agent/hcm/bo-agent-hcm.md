@@ -204,13 +204,13 @@ Action:
 
 10. You can see you new Absence Tool has been created.   Next, we want to create a Topic.
 
-    > (1) Note that your first Tool has been created.  You may need to scroll to see yours as this will show all tools created by attendees. <br>
+    > (1) Note that your first Tool has been created.  You may need to scroll or search as this will show all tools created by attendees. <br>
 
     > (2) Click on **Topics** in the upper tab bar.
 
     ![View Topics](images/bo-agent-hcm-image10.jpg)
 
-11. A Topic allows you to create with precise instructions that increase the effectiveness of your agents. You’ll create one here to use with your Agent.
+11. A Topic allows you to create precise instructions that increase the effectiveness of your agents. You’ll create one here to use with your Agent.
     > (1) Click the **Add** button to create a new Topic
 
     ![Add Topic](images/bo-agent-hcm-image11.jpg)
@@ -230,7 +230,7 @@ Action:
 
 13. Here you will provide instructions specifying the detailed response guidelines for any agent that leverages this Topic.   Topics allow you to define standard instructions that can be used across multiple agents.  This greatly simplifies standardization and maintenance.
 
-    > (1) Paste the provided text into the Instructions area. The Topic text is available in the copy block below or from the downloadable file provided in the pre-requisites for this lab.<br>
+    > (1) Paste the provided text into the Instructions area. The Topic text is available in the copy block below.<br>
 
     > (2) Next, you’ll let AI Agent Studio generate the Description based on the entered information.  Click the **Generate** button as shown on the screen.  Be sure to click the **Generate** button immediately under the Description field.
 
@@ -309,7 +309,7 @@ Action:
 
     ![Begin prompts](images/bo-agent-hcm-image20.jpg)
 
-21. Multi Agent Prompt
+21. Agent Settings: Prompts
 
     > (1) Enter the value for the **Agent Role**.  To streamline this step, we've agent role available in the copy block below. <br>
     > (2) Enter the value for the **Prompt**.   Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below. <br>
@@ -320,7 +320,7 @@ Action:
 
     **Agent Role**:
     ```text
-    <details> <summary>This topic provides response guidelines.</summary>
+    <details> <summary>Defines the role of the Agent.</summary>
     <copy>
     As a FMLA Leave of Absence Agent, your role is to efficiently ask whether the user is interested in applying for FMLA Leave and providing existing leave of absences
     </copy>
@@ -424,7 +424,7 @@ Action:
 
     ![Add Tools to your Agent](images/bo-agent-hcm-image22.jpg)
 
-23. Finally, you can add a Tool that provides the Agent with logged in user information.  This is important as the agent will limit any function and data access to the specific security roles of the user.  After that, you you’ll get started adding your Topic to the Agent.
+23. Finally, you can add a Tool that provides the Agent with logged in user information.  This is important as the agent will limit any function and data access to the specific security roles of the user.  After that, you’ll get started adding your Topic to the Agent.
 
     > (1) In the **Search by name, description, or code** field type **Fetch Logged**. <br>
 
@@ -440,7 +440,7 @@ Action:
 
     ![Add More Tools](images/bo-agent-hcm-image24.jpg)
 
-25. That’s it.  You’ve created your Agent with 3 tools (one that you created, one standard tool, and one that your AI Adventure Pit Crew pre-created for this Adventure.   You’re ready to save and complete this Adventure .  One standard tool, one pre-created, and one you just created today.
+25. That’s it.  You’ve created your Agent with 3 tools (one that you created, one standard tool, and one that your AI Adventure Pit Crew pre-created for this Adventure.   You’re ready to save and complete this Adventure.
 
     > (1) Click the **Create & Close** button on the bottom toolbar.
 
@@ -448,7 +448,7 @@ Action:
 
 26. There it is
 
-    > (1) Make note of your new Agent.  You may have scroll it will lists agents created by all of today’s attendees. 
+    > (1) Make note of your new Agent.  You may have to scroll or can search as it will lists agents created by all of today’s attendees. 
 
     ![List of agents](images/bo-agent-hcm-image26.jpg)
 
