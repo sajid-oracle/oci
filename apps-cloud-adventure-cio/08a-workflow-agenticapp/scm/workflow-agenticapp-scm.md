@@ -23,7 +23,7 @@ Estimated Time: 10-15 minutes
 ``` text
 <details> <summary>Specifies the Sales Order column attributes to be used in this workflow.</summary>
 <copy>
-Based on the output from {{$context.$nodes.GET_SALES_ORDER_SUBMITTED.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
+Based on the output from {{$context.$nodes.GET_SALES_ORDERS.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
 
 Set riskLevel to "" for each sales order
 </copy>
@@ -337,7 +337,7 @@ Format `salesOrderAmount` as US currency before placing it in the cell:
       ```  text
       <details> <summary>Specifies the Sales Order column attributes to be used in this workflow.</summary>
       <copy>
-      Based on the output from {{$context.$nodes.GET_SALES_ORDER_SUBMITTED.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
+      Based on the output from {{$context.$nodes.GET_SALES_ORDERS.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
 
       Set riskLevel to "" for each sales order
       </copy>
