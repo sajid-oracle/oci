@@ -320,7 +320,7 @@ Estimated Time: 15 minutes
 
 29. You can probably see where this is headed.  You now need to name the Node and select the Agent to be called for this route.
 
-    > (1) Enter **Benefits Advisor Agent** in the Name field. <br>
+    > (1) Enter **Leave and Absence Agent** in the Name field. <br>
     > (2) **Scroll down** to specify the Agent.
 
 

@@ -436,7 +436,7 @@ Action:
 24. Now you can search for and add your Topic, which will provide detailed instructions to the Agent.
 
     > (1) Type **CIOXX YYY** in the Search by name, description or code field under Available Topics, where XX is replaced with your user number and YYY is replaced with your initials. <br>
-    > (2) Hover over the **CIOXX YYY Response Guidelines Topics and click the **+** sign.
+    > (2) Hover over the **CIOXX YYY Response Guidelines Topic** and click the **+** sign.
 
     ![Add More Tools](images/bo-agent-hcm-image24.jpg)
 
@@ -448,7 +448,7 @@ Action:
 
 26. There it is
 
-    > (1) Make note of your new Agent.  You may have to scroll or can search as it will lists agents created by all of today’s attendees. 
+    > (1) Make note of your new Agent.  You may have to scroll or can search as it will lists agents created by all of today’s attendees.
 
     ![List of agents](images/bo-agent-hcm-image26.jpg)
 
