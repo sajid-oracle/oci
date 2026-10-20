@@ -169,7 +169,7 @@ Change to horizontal bar and sort high to low
 
     > (2) Click on the **>** Icon to expand the HCM Core transactions data set. <br>
 
-    > (3) Click on **Job Role** and **Turnover while pressing the **Ctrl** key on your laptop.
+    > (3) Click on **Job Role** and **Turnover** while pressing the **Ctrl** key on your laptop.
 
     ![Configuring the new workbook](images/analytics-with-ai-image20.jpg)
 
