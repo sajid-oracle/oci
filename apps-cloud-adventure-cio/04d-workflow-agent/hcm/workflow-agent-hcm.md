@@ -350,7 +350,7 @@ Estimated Time: 15 minutes
 
 32. Begin the conversation
 
-    > (1) Enter **Please Summarize my available benefits** into the chat window and hit the **Enter** key.
+    > (1) Enter **Please summarize available benefits** into the chat window and hit the **Enter** key.
 
 
     ![Debug Agent](./images/workflow-agent-hcm-image32.jpg)
@@ -400,7 +400,7 @@ Estimated Time: 15 minutes
 38. Success!  The agent has created my new FMLA leave request and confirms both the new request and the previously existing one.  Maybe you’d like to see it in HCM.
 
     > (1) Note the response about the newly created FMLA leave request.<br>
-    > (2) Type **Can I have a URL link to my absences** in the **Ask me anything** box on the bottom left and press the **Enter** key. 
+    > (2) Type **Show me link to last created absence** in the **Ask me anything** box on the bottom left and press the **Enter** key. 
 
 
     ![Success](./images/workflow-agent-hcm-image38.jpg)
