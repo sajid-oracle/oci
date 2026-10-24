@@ -10,7 +10,7 @@ During this adventure, request role access via Risk Management and experience th
 
 Estimated Time: 15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 1. During this adventure, request role access via Risk Management and experience the review and approval process.  These are the steps you will perform:
 

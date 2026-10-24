@@ -20,7 +20,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 
@@ -174,7 +174,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. In this activity, you will leverage pre-built machine learning capabilities (sentiment analysis) on survey data to understand employee sentiment.
 

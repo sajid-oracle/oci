@@ -15,7 +15,7 @@
 
   Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
@@ -216,7 +216,7 @@ During this adventure, request role access via Risk Management and experience th
 
 Estimated Time: 15 minutes
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. During this adventure, request role access via Risk Management and experience the review and approval process.  These are the steps you will perform:
 

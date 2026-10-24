@@ -17,7 +17,7 @@ In this activity, you will use Fusion Data Intelligence to
 
 Estimated Time: 10-15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 

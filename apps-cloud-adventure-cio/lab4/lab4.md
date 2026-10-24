@@ -15,7 +15,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create and assemble an Agent Team that includes your previously created Benefits Advisor Agent and FMLA Absence Agent.
 * Test the Agent Team
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -194,7 +194,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 * Interact with your AI Agent
 
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 
 1.  In this activity, you will embed your AI Agent Team in the application for use by end users.

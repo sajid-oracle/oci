@@ -12,7 +12,7 @@ In this lab, you will use Redwood to quickly and efficiently improve the user ex
 
 Estimated Time: 15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 1. You will use Redwood, Oracle’s next-generation design system, and Visual Builder to quickly and efficiently update Change Salary Page for Non-HR managers.
 

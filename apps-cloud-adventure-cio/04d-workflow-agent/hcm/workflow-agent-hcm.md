@@ -63,7 +63,7 @@ Add email node and connect to Benefits Policy Advisor. Input for the email node 
 </details>
 ```
 
-## Begin Exercise
+## Begin Adventure
 
 1. Build a Workflow Agent
 

@@ -14,7 +14,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Benefits Advisor Document Tool that references your benefits policy documents.
 * Create a Benefits Advisor Agent for the above Tool.
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -161,7 +161,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 * Perform a quick test of the Agent team and publish.
 
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio

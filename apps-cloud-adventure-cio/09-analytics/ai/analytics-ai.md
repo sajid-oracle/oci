@@ -40,7 +40,7 @@ Change to horizontal bar and sort high to low
  Show me similar information from HCM
 </copy>
 ```
-## Begin Exercise
+## Begin Adventure
 
 1. Create Cross-Functional Analytics for Business Insights
 

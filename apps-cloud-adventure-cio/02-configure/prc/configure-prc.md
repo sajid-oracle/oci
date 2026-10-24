@@ -12,7 +12,7 @@ In this lab, you will use Redwood to quickly and efficiently improve the user ex
 
 Estimated Time: 15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 1. You will use Redwood, Oracle’s next-generation design system, to quickly and efficiently update the Suppliers (New) listing page providing more visibility to Procurement Managers. Suppliers (New) is a dynamic listing page that allows you to create role-based layouts based on configurable criteria.
 

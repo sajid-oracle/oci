@@ -14,7 +14,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 Estimated Time: 10-15 minutes
 
 
-## Begin Exercise
+## Begin Adventure
 
 1. Create Agentic App including Actions and Testing
 

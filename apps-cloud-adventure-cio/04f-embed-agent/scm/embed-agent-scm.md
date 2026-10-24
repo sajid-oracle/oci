@@ -14,7 +14,7 @@ In this activity you will embed your AI Agent Team in the application for use by
 
 Estimated Time: 10-15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 
 1. In this activity, you will embed your AI Agent Team in the application for use by end users.

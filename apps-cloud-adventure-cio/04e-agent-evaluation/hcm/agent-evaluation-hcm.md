@@ -21,7 +21,7 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/Benefits-Evaluation.csv)
 
-## Begin Exercise
+## Begin Adventure
 
 1. In this activity you will create Evaluations for AI Agents and view results of evaluation runs.
 

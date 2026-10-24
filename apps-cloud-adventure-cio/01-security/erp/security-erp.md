@@ -10,7 +10,7 @@ During this adventure, you will perform a time sensitive task of granting permis
 
 Estimated Time: 15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 

@@ -10,7 +10,7 @@ In this lab, you will use Visual Builder to create additional screens
 
 Estimated Time: 15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 1. In this lab, you will Use Visual Builder to build a new Supplier Screen.
 

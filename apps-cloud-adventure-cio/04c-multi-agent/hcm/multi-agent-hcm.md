@@ -20,7 +20,7 @@ As a pre-requisite for this adventure, please download following file
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/prompt-multi-agent-hcm.txt)
 
-## Begin Exercise
+## Begin Adventure
 
 1. Assemble an AI Agent Team, Debug and Test
 

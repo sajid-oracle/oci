@@ -14,7 +14,7 @@ In this activity, you will Create analytics across different lines of business t
 
 Estimated Time: 15 minutes
 
-## Begin Exercise
+## Begin Adventure
 
 1. In this activity, you will Create analytics across different lines of business to derive better business insights.
 

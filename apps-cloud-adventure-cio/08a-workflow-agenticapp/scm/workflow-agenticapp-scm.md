@@ -215,7 +215,7 @@ Format `salesOrderAmount` as US currency before placing it in the cell:
 </copy>
 </details>
 ```
-## Begin Exercise
+## Begin Adventure
 
 1. Build Workflow for Agentic App, Debug and Test
 

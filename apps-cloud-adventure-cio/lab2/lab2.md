@@ -17,7 +17,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. You will use Redwood, Oracle’s next-generation design system, and Visual Builder to quickly and efficiently update Change Salary Page for Non-HR managers.
 
@@ -236,7 +236,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### **Begin Adventure**
 
 1. In this lab, you will Use Visual Builder to build a new Supplier Screen.
 
