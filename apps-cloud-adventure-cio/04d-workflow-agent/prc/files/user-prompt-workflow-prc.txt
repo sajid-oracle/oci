@@ -1,0 +1,10 @@
+Based on the user’s message in {{$context.$system.$inputMessage}}, identify the user’s primary intent.
+
+If the user asks about procurement policies, set userIntent to Policy.
+
+If the user requests one of the following
+- Query for existing purchase requisitions
+- Create a purchase requisition
+Set userIntent to Requisition.
+
+Return only the userIntent value.
