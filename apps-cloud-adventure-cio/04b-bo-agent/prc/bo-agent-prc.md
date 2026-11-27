@@ -173,7 +173,7 @@ Action:
 
 ## Begin Adventure
 
-1. Slide 2:  Create Agentic App including Actions and Testing
+1. Create Purchase Requsition Business Object Action Agent
 
 
     ![Adventure Flow – Agent App Command Center](images/bo-agent-prc-image1.jpg)
@@ -187,7 +187,7 @@ Action:
 
 3. Expand Menu
 
-    > (1): Hover your mouse over the **Oracle** Icon. <br>.
+    > (1): Hover your mouse over the **Oracle** Icon. <br>
     > (2): Click on the **Pin** Icon to expand the menu.
 
 
@@ -236,7 +236,7 @@ Action:
 
     > (1): **Scroll Down** to see the **Functions** region. <br>
 
-    > (3): Click the **Checkbox** next to both **getPurchaseRequisitions** and **submitPurchaseRequisition** to enable them for use in this tool. <br>
+    > (2): Click the **Checkbox** next to both **getPurchaseRequisitions** and **submitPurchaseRequisition** to enable them for use in this tool. <br>
 
     > (3): Click the **Create and Close** button on the bottom toolbar.
 
@@ -329,8 +329,7 @@ Action:
 
     ![Begin prompts](images/bo-agent-prc-image18.jpg)
 
-19. Agent Settings: Prompts
-
+19. Define Agent Role, Prompt and add Fetch Logged in user details tool
 
     > (1): Enter the value for the **Agent Role**.   To streamline this step, we’ve made the Agent Role available in the copy block below. <br>
     > (2): Enter the value for the **Prompt**.   Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below. <br>
@@ -478,15 +477,14 @@ Action:
         </details>
         ```
 
-20. Next you’ll add the Purchase Req Tool that you previously created. 
+20. Next you’ll add the Purchase Req Tool that you previously created.
 
     > (1) Type **CIOXX YYY** in the Search by name, description or code field under Available Tools, , where XX is replaced with your user number and YYY is replaced with your initials.  This replaces the Fetch Logged search you did previously<br>
     > (2) Hover over the **CIOXX YYY Purchase Req BO Tool** and click the **+** sign.
-     
 
     ![Add Tools to your Agent](images/bo-agent-prc-image20.jpg)
 
-21. Finally, you can add a Tool that provides the Agent with logged in user information.  This is important as the agent will limit any function and data access to the specific security roles of the user.  After that, you’ll get started adding your Topic to the Agent.
+21. Finally, you can add a Deep Link Tool that provides user ability to navigate directly to Purchase Requisitions page in the User Interface.
 
 
     > (1): Type **AIA** in the Search by name, description or code field under Available Tools.<br>
@@ -499,7 +497,6 @@ Action:
 
     > (1) Type **CIOXX YYY** in the Search by name, description or code field under Available Topics, where XX is replaced with your user number and YYY is replaced with your initials. <br>
     > (2) Hover over the **CIOXX YYY Response Guidelines Topics and click the **+** sign.
-     
 
     ![Add More Tools](images/bo-agent-prc-image22.jpg)
 
@@ -539,4 +536,4 @@ With AI Agent Studio, you can easily extend preconfigured workflows, and build n
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
-* **Last Updated By/Date** - Sajid Saleem/Charlie Moff, October 2026
+* **Last Updated By/Date** - Sajid Saleem/Charlie Moff, November 2026
