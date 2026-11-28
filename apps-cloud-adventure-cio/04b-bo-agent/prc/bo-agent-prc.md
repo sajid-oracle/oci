@@ -173,7 +173,7 @@ Action:
 
 ## Begin Adventure
 
-1. Create Purchase Requsition Business Object Action Agent
+1. Create Purchase Requisition Action Agent
 
 
     ![Adventure Flow – Agent App Command Center](images/bo-agent-prc-image1.jpg)
